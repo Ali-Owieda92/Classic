@@ -1,0 +1,310 @@
+:root {
+    --main-Color:#009688;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+/* Start Components  */
+.special-heading {
+    font-weight: 300;
+    position: relative;
+    word-spacing: -10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.special-heading::before {
+    content: "";
+    position: absolute;
+    width: 4%;
+    height: 2px;
+    background-color: #000;
+    top: 26px;
+}
+/* End Components  */
+.container {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Start Landing  */
+.landing {
+    height: 100vh;
+    background-image: url("/imgs/header2.jpg");
+    background-size: cover;
+    position: relative;
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.landing nav {
+    position: relative;
+}
+.landing .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+}
+.landing nav .container .heading {
+    color: #FFF;
+}
+.landing nav .container .links {
+    display: flex;
+}
+.landing nav .container .links .item {
+    list-style: none;
+    padding-left: 10px;
+}
+.landing nav .container .links .item a {
+    text-decoration: none;
+    color: #FFF;
+    position: relative;
+}
+.landing nav .container .links .item a.active,
+.landing nav .container .links .item a:hover {
+    color: var(--main-Color);
+}
+.landing nav .container .links .item a.active::before,
+.landing nav .container .links .item a:hover::before {
+    content: "";
+    position: absolute;
+    background-color: var(--main-Color);
+    width: 100%;
+    height: 2px;
+    top: 22px;
+    left: 0;
+}
+.landing .info {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #FFF;
+    text-align: center;
+}
+.landing .info h2 {
+    text-transform: uppercase;
+    font-size: 35px;
+}
+.landing .info h2 span {
+    color: var(--main-Color);
+}
+.landing .info p {
+    padding-top: 10px;
+    line-height: 1.6;
+}
+.landing .btn {
+    position: absolute;
+    top: calc(100% - 100px);
+    left: 50%;
+    text-decoration: none;
+    border: 1px solid #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    color: #FFF;
+}
+.landing .btn:hover {
+    border: none;
+    color: var(--main-Color);
+}
+.landing .btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 5px;
+    height: 5px;
+    transition: .9s;
+}
+.landing .btn:hover::before {
+    background-color: rgba(0, 0, 0, .2);
+    width: 100%;
+    height: 100%;
+}
+/* End Landing  */
+/* Start Services  */
+.services {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(300px,1fr));
+    gap: 10px;
+    margin-top: 50px;
+}
+.services .box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.services .box i {
+    color: var(--main-Color);
+    margin-right: 20px;
+    font-size: 90px;
+    position: relative;
+    bottom: 15px;
+    right: 15px;
+}
+.services .box .disc h4 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+/* End Services  */
+/* Start Team  */
+.team {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #EEE;
+}
+.team .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.team .container .text {
+    width: 350px;
+}
+.team .container img {
+    cursor: pointer;
+}
+/* End Team  */
+/* Start Client  */
+.client {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url("/imgs/keyboard.jpg");
+    background-size: cover;
+}
+.client .container {
+    text-align: center;
+}
+.client .container .heading {
+    margin-bottom: 40px;
+}
+.client .container p {
+    position: relative;
+    line-height: 1.6;
+}
+.client .container p::before {
+    content: '"';
+}
+.client .container p::after {
+    content: '"';
+}
+.client .container span {
+    display: block;
+    margin-top: 40px;
+}
+/* End Client  */
+/* Start Project  */
+.project {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.project .container .cat {
+    display: flex;
+    margin-bottom: 40px;
+}
+.project .container .cat li {
+    list-style: none;
+    padding: 15px;
+    border: 1px solid;
+    margin-left: 10px;
+}
+.project .container .cat li:hover,
+.project .container .cat li.active {
+    background-color: var(--main-Color);
+    color: #FFF;
+}
+.project .container .images {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(300px,1fr));
+    gap: 20px;
+}
+.project .container .images img {
+    width: fit-content;
+    height: 220px;
+}
+/* End Project  */
+/* Start Contact  */
+.contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #333;
+    color: #FFF;
+}
+.contact .container {
+    display: flex;
+    justify-content: space-between;
+}
+.contact .container .about-classic h2 {
+    margin-bottom: 40px;
+}
+.contact .container .about-classic .lo {
+    height: 200px;
+    width: 300px;
+}
+.contact .container .about-classic .icons {
+    display: flex;
+    margin-left: 50px;
+}
+.contact .container .about-classic .icons li{
+    list-style: none;
+    padding-left: 20px;
+    border: 1px solid #FFF;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+.contact .container .about-classic .right {
+    margin-top: 40px;
+}
+.contact .container .tags h2{
+    margin-bottom: 40px;
+}
+.contact .container .tags ul {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(40px, 100px));
+}
+.contact .container .tags ul li {
+    list-style: none;
+    border: 1px solid;
+    margin: 2px;
+}
+.contact .container .recent-posts h2{
+    margin-bottom: 40px;
+}
+.contact .container .recent-posts .image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.contact .container .image img {
+    width: 50px;
+}
+.contact .container .blog-categories h2 {
+    margin-bottom: 40px;
+}
+.contact .container .blog-categories ul li {
+    list-style: none;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+/* End Contact  */
